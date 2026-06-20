@@ -56,4 +56,3 @@ class ProfilePlotter2D:
                 verticalalignment='top', bbox=props)
         
         plt.tight_layout()
-        plt.show()

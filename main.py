@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt  # librería para graficar
 from core.topography import TopographyProfile
 from core.hydraulics import SteadyStateSolver
 from scada.telemetry import SCADANetwork
@@ -27,6 +28,9 @@ def run_simulation():
     mesh_3d = CylinderMesh3D(topo.z_km, elevation_smooth, head_profile)
     mesh_3d.generate_mesh()
     mesh_3d.plot_3d_simulation()
+    
+    # Abrir ambos gráficos simultáneamente y ceder el control al event loop
+    plt.show()
 
 if __name__ == "__main__":
     run_simulation()
