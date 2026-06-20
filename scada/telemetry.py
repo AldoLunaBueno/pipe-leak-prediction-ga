@@ -4,8 +4,8 @@ class SCADANetwork:
     def __init__(self, z_km_array):
         self.z_km = z_km_array
         
-        # Definición de las posiciones kilométricas de la telemetría [cite: 54]
-        # y sus respectivas etiquetas industriales [cite: 55]
+        # Definición de las posiciones kilométricas de la telemetría
+        # y sus respectivas etiquetas industriales
         self.stations = {
             0: 'Estación 1 (San José)',
             65: 'PT-65 Checkpoint',

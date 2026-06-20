@@ -12,7 +12,7 @@ class SteadyStateSolver:
         """
         Resuelve la Carga Piezométrica (H) en estado estacionario de forma vectorizada.
         """
-        # Cálculo de la pérdida por fricción constante por metro [cite: 49]
+        # Cálculo de la pérdida por fricción constante por metro
         friction_loss_per_m = (config.F_FACTOR * config.Q_FLOW**2) / (2 * config.G * config.D_IN * config.AREA**2)
         
         # H(i) = H_inlet - (E(i) - E(0)) - (pérdida_fricción * z(i))
@@ -27,7 +27,7 @@ class SteadyStateSolver:
         if not np.any(self.head):
             self.calculate_head_loss()
             
-        # P = rho * g * (H - E) convertida a Bar (1 bar = 10^5 Pa) [cite: 51]
+        # P = rho * g * (H - E) convertida a Bar (1 bar = 10^5 Pa)
         self.pressure_bar = (config.RHO * config.G * (self.head - self.elevation)) / 1e5
         
         return self.pressure_bar

@@ -4,9 +4,9 @@ import config
 
 class TopographyProfile:
     def __init__(self):
-        # Vector de distancia horizontal discretizada en metros [cite: 36, 37]
+        # Vector de distancia horizontal discretizada en metros
         self.z_m = np.arange(0, config.L + config.DZ, config.DZ)
-        # Distancia normalizada a kilómetros [cite: 37]
+        # Distancia normalizada a kilómetros
         self.z_km = self.z_m / 1000.0  
         self.elevation = np.zeros_like(self.z_km)
         self.elevation_smooth = np.zeros_like(self.z_km)
@@ -18,7 +18,7 @@ class TopographyProfile:
         """
         z = self.z_km
         
-        # Implementación vectorizada de las ecuaciones topográficas [cite: 43, 44, 45, 46]
+        # Implementación vectorizada de las ecuaciones topográficas
         self.elevation = np.piecewise(z, 
             [
                 z <= 90, 
