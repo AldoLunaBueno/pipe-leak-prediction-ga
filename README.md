@@ -21,7 +21,7 @@ Software para predecir fugas en oleaductos mediante algoritmos genéticos
 * Haz clic en la barra de direcciones de la carpeta (arriba), borra lo que haya, escribe **`cmd`** y presiona **Enter**. Se abrirá una ventana negra de comandos exactamente en esa ubicación.
 ![](images/barra-direcciones.png)
 
-**4. Crear y activar el entorno virtual**
+4. Crear y activar el entorno virtual
 En esa ventana negra, copia, pega y ejecuta los siguientes comandos uno por uno (presionando Enter después de cada uno):
 
 * Para crear el entorno:
